@@ -358,24 +358,14 @@
 <p>上例中，点击“随笔”或“行动”，直接进入相应类别文章目录；点击每篇文章标题下方“归类于XX”也直接进入该分类目录。</p>
 <p>怎么做到，<a href="http://theme-next.iissnan.com" target="_blank" rel="external">官方文档</a>无说明。这里结合<a href="https://www.zhihu.com/question/33324071" target="_blank" rel="external">碎瞳Artin</a>的分享，加上自己半天的折腾，总结出实现方法，和可以避免的坑。前置操作需要你已经搭建好了hexo博客，并熟悉如何布置next主题。以下操作在MacOS＋Next主题环境下实现。</p>
 <p>首先，打开根目录下的scaffolds/post.md文件，添加categories参数。</p>
-<blockquote>
-<p>title: “title” <br><br>date: {date}  <br><br>tags: <br><br>categories: # 添加此字段 <br></p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: &quot;title&quot; &lt;/br&gt;</div><div class="line">date: &#123;date&#125;  &lt;/br&gt;</div><div class="line">tags: &lt;/br&gt;</div><div class="line">categories: # 添加此字段 &lt;/br&gt;</div></pre></td></tr></table></figure>
 <p>此文件用以给每篇文章配置共同参数，添加之后每次新写文章，有机会给每篇文章规定categories，注意，此时文章分类赋值用英文，不然会碰到一个大坑，稍后解释。</p>
-<blockquote>
-<p>title: ‘如何定制Hexo博客菜单栏’ <br><br>date: 2017-01-29 09:39:06 <br><br>categories: making <br></p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: &apos;如何定制Hexo博客菜单栏&apos; &lt;/br&gt;</div><div class="line">date: 2017-01-29 09:39:06 &lt;/br&gt;</div><div class="line">categories: making &lt;/br&gt;</div></pre></td></tr></table></figure>
 <p>新文章加了分类之后，将主页菜单栏选项和分类目录连接，需要进入主题包下的配置文件（_config.yml），因为它决定了菜单如何呈现。该文件中找到menu参数，未加”#”的条目会陈列在菜单栏。其中essays和making是非默认选项，自己手动加上，并添加路径。</p>
-<blockquote>
-<p>menu: <br><br>  home: /  <br></p>
-<p>  #categories: /categories  <br></p>
-<p>  #about: /about  <br><br>  archives: /archives  <br></p>
-<p>  #tags: /tags  <br></p>
-<p>  #sitemap: /sitemap.xml <br></p>
-<p>  #commonweal: /404.html <br><br>  essays: /categories/essays <br><br>  making: /categories/making <br></p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">menu: &lt;/br&gt; </div><div class="line">  home: /  &lt;/br&gt;</div><div class="line">  #categories: /categories  &lt;/br&gt;</div><div class="line">  #about: /about  &lt;/br&gt;</div><div class="line">  archives: /archives  &lt;/br&gt;</div><div class="line">  #tags: /tags  &lt;/br&gt;</div><div class="line">  #sitemap: /sitemap.xml &lt;/br&gt;</div><div class="line">  #commonweal: /404.html &lt;/br&gt;</div><div class="line">  essays: /categories/essays &lt;/br&gt;</div><div class="line">  making: /categories/making &lt;/br&gt;</div></pre></td></tr></table></figure>
 <p>比如making: /categories/making，直观表现是，点击菜单栏making选项，按照categories／making的路径读取文件，也就进入making分类页面。因为yml文件不能处理中文，如果之前单个文章归类名字用中文，这里making改成行动，会出现错误提示”invalid header”。</p>
-<p>到此时配置已经基本结束，效果呈现：<a href="https://guoyuming.github.io/categories/essays/；你点击“随笔”，进入essays分类目录，因为yml文件无法输入中文。其实它们是同个路径。">https://guoyuming.github.io/categories/essays/；你点击“随笔”，进入essays分类目录，因为yml文件无法输入中文。其实它们是同个路径。</a></p>
+<p>到此时配置已经基本结束，效果呈现：<a href="https://guoyuming.github.io/categories/essays/；">https://guoyuming.github.io/categories/essays/；</a></p>
+<p>你点击“随笔”，进入essays分类目录，因为yml文件无法输入中文。其实它们是同个路径。</p>
 
           
         
@@ -516,21 +506,21 @@
       
         
           
-            <p>读书的时候，每段日子似乎都有结束的时候。期待期末考的结束，寒假可以放鞭炮吃年货了；期待高一的结束，高二学渣可以逆袭了；期待大学的结束，挣脱四年的旧困，迫不及待看看新环境。现在，日子无始无终，软塌的泥土上立不住里旧时的房间。满足再大的愿望，也只是欣喜一下，便心有戚戚地奔向下一段路途。</p>
-<p>新春零点的爆竹喧嚣，从难以忍受到相安无事，也就经历了几次。再早的记忆早已模糊破碎。如果说晚睡是怕结束这一天，那么除夕晚睡是不是怕结束这一年？新旧交替的几个时辰，你都保持茫然的清醒，做着一些和去年的自己不着边际的事。看陈小春版《鹿鼎记》，看到父母睡觉，看到最后一集已是将近三点。</p>
-<p>你看见几个欣赏的人，在岁末写自我总结，读书几本、观影几部云云，欣羡他们笃定践行独有的品味，坚决走自己的节奏，在大时间周期重复着有趣的生活。于是你写了这个博客，逃离世界的关注，在没有人的地方，成为自己。</p>
-<p>大多数人为自己认同的产品背书，少数人创造产品。只是，人是最好的产品，成为自己是最好的奖赏。那个奖赏在哪里？在知乎上搜“如何找到自己真正想做”这类问题，出来的话题何止成百上千。只是，人的天赋、经历、环境迥异，任何具体的方法只是统计学上的个体、程序类别里面的实例，并不适用于你。更加可怕的现实是，环境似乎不想你成为自己。《黑客帝国》中，锡安的人只是少数，大部分人在母体当中，靠着AI的制造的幻觉和养料来活。因为所有人都做自己的主人，笼罩在我们头顶的被叫做宿命的东西，该怎么运转？成为自己等于成为异类，远离人群，和朋友决裂，换来的自己那片方寸欢喜。想用一种方法，一下子，就找到一生所爱，你是不是在贪心和偷懒呢？</p>
+            <p>读书的时候，每段日子似乎都有结束的时候。期待期末考的结束，寒假可以放鞭炮吃年货了；期待高一的结束，到高二学渣可以逆袭了；期待大学的结束，挣脱四年的旧困，迫不及待看看新环境。现在，日子无始无终，软塌的泥土上立不住里旧时的房间。满足再大的愿望，也只是欣喜一下，便心有戚戚地奔向下一段路途。</p>
+<p>新春零点，爆竹喧嚣，从难以忍受到相安无事，也就经历了几次，再早的记忆早已模糊破碎。如果说晚睡是怕结束这一天，那么除夕晚睡是不是怕结束这一年？新旧交替，几个时辰你都保持茫然的清醒，做着一些和去年的自己不着边际的事。</p>
+<p>你有几个欣赏的人，看见他们岁末写的总结，读书几本、观影几部云云，欣羡他们笃定践行独有的品味，坚决走自己的节奏，在大时间周期重复着有趣的生活。你搭出这个博客，逃离世界的关注，在没有人的地方，成为自己。</p>
+<p>大多数人为自己认同的产品背书，少数人创造产品。人是最好的产品，成为自己是最好的奖赏。奖赏在哪里？在知乎上搜“如何找到自己真正想做”这类问题，出来的话题何止成百上千。人的天赋、经历、环境迥异，任何具体方法只是统计学上的个体、程序类别里面的实例，并不适用于你。更可怕的现实是，环境似乎不想你成为自己。《黑客帝国》中，在锡安的人只有少数，大部分人在母体当中，靠着AI制造的幻觉和养料来活。所有人都做自己的主人，笼罩在我们头顶上那个被叫做宿命的东西，该怎么运转？成为自己等于成为异类，远离人群，和熟人决裂，换来自己那片方寸欢喜。你想用一种方法，一下子，就找到一生所爱，是不是在贪心和偷懒呢？</p>
 <blockquote>
-<p>在许多领域，通往卓越的道路不是精确计算时间的结果，而是模糊与含糊不清的。没有简单的模型成为伟大。<br>                                             —— Richard Hamming</p>
+<p>在许多领域，通往卓越的道路不是精确计算时间的结果，而是模糊与含糊不清的。没有简单的模型成为伟大。<br>—— Richard Hamming</p>
 </blockquote>
-<p>只是，智者总有高阶模型，优雅而危险；它们不是捷径，相反，想习得高阶模型，选择了更难走的路。找到一生所求，你试试从管理时间到管理心流。你不要高估自己的意志，以为写在清单里面就会实现，放弃清单，敬畏时间。时间是身外物，但心流是自己的。</p>
-<p>起初，天地茫茫然不知所名，你胆怯的触角向外伸出，好奇试探周围；停下之前，你总会找到一些东西，你想多看几眼；一些事情，你想多做；一些时间，你感叹白驹过隙。让小小的自我后退，隐没在宇宙的幕布之后，你不言不语，斩断时空。这样的时候，你就有了心流；这样的感觉越来越多，你还会在乎寻找真正的自己吗？</p>
-<p>《阿凡达》中，星球上所有生物都有神经元相互连接；人类有镜像神经元，来理解、欣赏、合作。人终究还是需要在群体中成长。你挖出的宝藏，在志趣相同的人面前，才会不断散发光辉。就像纯银说自己是差等生，自制力差，却做得好产品和编辑的原因：</p>
+<p>只是，世间总有一些高阶模型，优雅而危险；它们不是捷径，相反，要习得高阶模型，你选择了更荆棘满布的路。找到一生所求，你试试从管理时间到管理心流。不要高估自己的意志，以为写在清单里面的都会实现。放弃清单，敬畏时间。时间已是身外物，心流源于自己。</p>
+<p>起初，天地茫茫然不知所名，你胆怯的触角向外伸出，好奇地试探周围；停下之前，你总会找到一些东西，你想多看几眼；一些事情，你想多做几次；一些时间，你感叹白驹过隙。小小的自我后退，隐没在更大宇宙的幕布之后，你忘记了自己，不言不语，斩断时空。这时，心流像牛奶与蜂蜜一样，从山间汩汩涌出。这样的感觉越来越多，你还会在乎寻找真正的自己吗？</p>
+<p>《阿凡达》中，星球上所有生物都能相互连接，他们的辫子或触角接在一起，开始说话。人类有镜像神经元，来理解、欣赏、合作。人终究还是需要在群体中成长。你挖出的宝藏，在志趣相同的人面前，散发出光芒。就像纯银说自己是差等生，自制力差，却做得好产品和编辑的原因：</p>
 <blockquote>
 <p>这还是因为天赋啊。天赋在这里，稍微加勒个油，容易获得超越常人的成就。在成就激励下，自然会不断地去努力。</p>
 </blockquote>
-<p>只是，天赋并不一定是让你你超越常人的特质；你长期在心流当中，时光潺潺流过，剩下的就是天赋。</p>
-<p>在你降生之前，世间早已有了你的啼哭。上帝双手摇着斑驳的黄铜签筒，大地之上，水汽氤氲，阳光穿过树叶的间隙，泥土温润。你不哭了，破土而出，想成为自己的主人。愿你在安身立命的途中，勤奋、专注、持久、善良与创意相伴。</p>
+<p>只是，天赋并不一定是让你超越常人的特质，成就也不是你比别人做得更好的事情。长久地身处心流体验中，时光潺潺流过，剩下的就是天赋，也是成就。</p>
+<p>在你降生之前，世间早已有了你的啼哭。上帝摇着斑驳的黄铜签筒，打了个盹，不知哪只签掉落，穿过云端。大地之上，水汽氤氲，阳光穿过树叶的间隙，泥土温润。愿你在安身立命的途中，勤奋、专注、持久、善良与创意相伴。</p>
 
           
         
