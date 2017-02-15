@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://guoyuming.github.io/2017/01/29/HowtoCustomHexoMenu@making/index.html">
 <meta property="og:site_name" content="Yuming">
 <meta property="og:description" content="用Hexo搭建，托管在github，优雅简单地维护自己的博客。大家在Hexo上开发了不少主题，Next主题人气很高。它简洁不失贫乏，优雅不失灵动。如果你想行云流水般书写，让读者从归档和主页按时间轴阅览，搞定标配就足够。但如果你觉得读者从菜单点击分类项目，再进到选择类别页面，多了一步，想定制自己的菜单栏，用户点击某项直接进入分类，你要激活标配之外的功能：菜单栏显示自建分类，点击直接进入该类别文章。">
-<meta property="og:updated_time" content="2017-01-30T02:36:15.000Z">
+<meta property="og:updated_time" content="2017-02-15T15:44:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何定制Hexo博客菜单栏">
 <meta name="twitter:description" content="用Hexo搭建，托管在github，优雅简单地维护自己的博客。大家在Hexo上开发了不少主题，Next主题人气很高。它简洁不失贫乏，优雅不失灵动。如果你想行云流水般书写，让读者从归档和主页按时间轴阅览，搞定标配就足够。但如果你觉得读者从菜单点击分类项目，再进到选择类别页面，多了一步，想定制自己的菜单栏，用户点击某项直接进入分类，你要激活标配之外的功能：菜单栏显示自建分类，点击直接进入该类别文章。">
@@ -101,7 +101,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
@@ -358,7 +358,7 @@
 <p>新文章加了分类之后，将主页菜单栏选项和分类目录连接，需要进入主题包下的配置文件（_config.yml），因为它决定了菜单如何呈现。该文件中找到menu参数，未加”#”的条目会陈列在菜单栏。其中essays和making是非默认选项，自己手动加上，并添加路径。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">menu:   </div><div class="line">  home: /   </div><div class="line">  #categories: /categories   </div><div class="line">  #about: /about   </div><div class="line">  archives: /archives   </div><div class="line">  #tags: /tags   </div><div class="line">  #sitemap: /sitemap.xml  </div><div class="line">  #commonweal: /404.html  </div><div class="line">  essays: /categories/essays  </div><div class="line">  making: /categories/making</div></pre></td></tr></table></figure>
 <p>比如making: /categories/making，直观表现是，点击菜单栏making选项，按照categories／making的路径读取文件，也就进入making分类页面。因为yml文件不能处理中文，如果之前单个文章归类名字用中文，这里making改成行动，会出现错误提示”invalid header”。</p>
-<p>到此时配置已经基本结束，效果呈现：<a href="https://guoyuming.github.io/categories/essays/；">https://guoyuming.github.io/categories/essays/；</a></p>
+<p>到此时配置已经基本结束，效果呈现：<a href="https://guoyuming.github.io/categories/essays/">https://guoyuming.github.io/categories/essays/</a></p>
 <p>你点击“随笔”，进入essays分类目录，因为yml文件无法输入中文。其实它们是同个路径。</p>
 
       
@@ -521,7 +521,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
