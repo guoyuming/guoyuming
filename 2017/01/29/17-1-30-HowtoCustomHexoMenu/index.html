@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="用Hexo搭建，托管在github，优雅简单地维护自己的博客。大家在Hexo上开发了不少主题，Next主题人气很高。它简洁不失贫乏，优雅不失灵动。如果你想行云流水般书写，让读者从归档和主页按时间轴阅览，搞定标配就足够。但如果你觉得读者从菜单点击分类项目，再进到选择类别页面，多了一步，想定制自己的菜单栏，用户点击某项直接进入分类，你要激活标配之外的功能：菜单栏显示自建分类，点击直接进入该类别文章。">
+<meta name="description" content="实现效果：点击首页导航栏类别名称，进入该分类文章目录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何定制Hexo博客菜单栏">
 <meta property="og:url" content="https://guoyuming.github.io/2017/01/29/17-1-30-HowtoCustomHexoMenu/index.html">
 <meta property="og:site_name" content="Yuming">
-<meta property="og:description" content="用Hexo搭建，托管在github，优雅简单地维护自己的博客。大家在Hexo上开发了不少主题，Next主题人气很高。它简洁不失贫乏，优雅不失灵动。如果你想行云流水般书写，让读者从归档和主页按时间轴阅览，搞定标配就足够。但如果你觉得读者从菜单点击分类项目，再进到选择类别页面，多了一步，想定制自己的菜单栏，用户点击某项直接进入分类，你要激活标配之外的功能：菜单栏显示自建分类，点击直接进入该类别文章。">
-<meta property="og:updated_time" content="2017-02-15T15:44:08.000Z">
+<meta property="og:description" content="实现效果：点击首页导航栏类别名称，进入该分类文章目录。">
+<meta property="og:updated_time" content="2017-02-16T06:21:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何定制Hexo博客菜单栏">
-<meta name="twitter:description" content="用Hexo搭建，托管在github，优雅简单地维护自己的博客。大家在Hexo上开发了不少主题，Next主题人气很高。它简洁不失贫乏，优雅不失灵动。如果你想行云流水般书写，让读者从归档和主页按时间轴阅览，搞定标配就足够。但如果你觉得读者从菜单点击分类项目，再进到选择类别页面，多了一步，想定制自己的菜单栏，用户点击某项直接进入分类，你要激活标配之外的功能：菜单栏显示自建分类，点击直接进入该类别文章。">
+<meta name="twitter:description" content="实现效果：点击首页导航栏类别名称，进入该分类文章目录。">
 
 
 
@@ -347,7 +347,7 @@
       
 
       
-        <p>用Hexo搭建，托管在github，优雅简单地维护自己的博客。大家在Hexo上开发了不少主题，Next主题人气很高。它简洁不失贫乏，优雅不失灵动。如果你想行云流水般书写，让读者从归档和主页按时间轴阅览，搞定标配就足够。但如果你觉得读者从菜单点击分类项目，再进到选择类别页面，多了一步，想定制自己的菜单栏，用户点击某项直接进入分类，你要激活标配之外的功能：菜单栏显示自建分类，点击直接进入该类别文章。</p>
+        <p>实现效果：点击首页导航栏类别名称，进入该分类文章目录。<br><a id="more"></a><br>用Hexo搭建，托管在github，优雅简单地维护自己的博客。大家在Hexo上开发了不少主题，Next主题人气很高。它简洁不失贫乏，优雅不失灵动。如果你想行云流水般书写，让读者从归档和主页按时间轴阅览，搞定标配就足够。但如果你觉得读者从菜单点击分类项目，再进到选择类别页面，多了一步，想定制自己的菜单栏，用户点击某项直接进入分类，你要激活标配之外的功能：菜单栏显示自建分类，点击直接进入该类别文章。</p>
 <p><a href="https://guoyuming.github.io/2017/01/29/NewyearResolution@essays/">效果示范</a></p>
 <p>上例中，点击“随笔”或“行动”，直接进入相应类别文章目录；点击每篇文章标题下方“归类于XX”也直接进入该分类目录。</p>
 <p>怎么做到，<a href="http://theme-next.iissnan.com" target="_blank" rel="external">官方文档</a>无说明。这里结合<a href="https://www.zhihu.com/question/33324071" target="_blank" rel="external">碎瞳Artin</a>的分享，加上自己半天的折腾，总结出实现方法，和可以避免的坑。前置操作需要你已经搭建好了hexo博客，并熟悉如何布置next主题。以下操作在MacOS＋Next主题环境下实现。</p>
