@@ -226,51 +226,51 @@ h6 {
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 34px;
-}
-@media (max-width: 767px) {
-  h1 {
-    font-size: 30px;
-  }
-}
-h2 {
-  font-size: 32px;
-}
-@media (max-width: 767px) {
-  h2 {
-    font-size: 28px;
-  }
-}
-h3 {
-  font-size: 30px;
-}
-@media (max-width: 767px) {
-  h3 {
-    font-size: 26px;
-  }
-}
-h4 {
-  font-size: 28px;
-}
-@media (max-width: 767px) {
-  h4 {
-    font-size: 24px;
-  }
-}
-h5 {
-  font-size: 26px;
-}
-@media (max-width: 767px) {
-  h5 {
-    font-size: 22px;
-  }
-}
-h6 {
   font-size: 24px;
 }
 @media (max-width: 767px) {
-  h6 {
+  h1 {
     font-size: 20px;
+  }
+}
+h2 {
+  font-size: 22px;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+h3 {
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+h4 {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  h4 {
+    font-size: 14px;
+  }
+}
+h5 {
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  h5 {
+    font-size: 12px;
+  }
+}
+h6 {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  h6 {
+    font-size: 10px;
   }
 }
 p {
@@ -989,7 +989,7 @@ pre .javascript .function {
 }
 .site-meta {
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -1685,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #089aff;
+  background: #b8d198;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2601,7 +2601,7 @@ hr {
 }
 .posts-expand .post-title,
 .posts-expand .post-meta {
-  text-align: center;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title,
@@ -2624,7 +2624,7 @@ hr {
 }
 .posts-expand .post-title {
   position: relative;
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 400;
 }
 @media (max-width: 767px) {
